@@ -1,0 +1,198 @@
+.App {
+  //text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 10px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  padding: 100px 10px 10px 10px;
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 12px;
+    color: #696868;
+  }
+
+  .left-container {
+    display: inline-block;
+    flex: 6;
+    padding: 20px;
+
+    .search-box {
+      height: 40px;
+      border-radius: 20px;
+      border: 1px solid #dad6d6;
+      padding: 5px 20px;
+      color: #4b4a4a;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border: 1px solid #929191;
+    }
+
+    .people-list {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 30px 0;
+
+      .people-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 250px;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid #dad6d6;
+        margin: 10px;
+
+        .people-item-avatar {
+          display: inline-block;
+          flex: 1;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          padding: 1px;
+
+          img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .people-item-name {
+          display: inline-block;
+          flex: 3;
+          padding: 15px;
+          text-align: left;
+        }
+      }
+
+      .people-item.selected-profile {
+        font-weight: 600;
+        box-shadow: 1px 1px 1px #b3b1b1;
+        cursor: pointer;
+      }
+
+      .people-item:hover {
+        font-weight: 600;
+        box-shadow: 1px 1px 1px #b3b1b1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right-container {
+    display: inline-block;
+    flex: 5;
+    padding: 20px;
+
+    .profile-image-container {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      overflow: hidden;
+
+      .profile-image-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        .profile-image {
+          width: 100%;
+          filter: blur(5px) brightness(50%);
+        }
+      }
+
+      .profile-image-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 4px solid white;
+        border-radius: 50%;
+        z-index: 3;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    .profile-information {
+      flex-direction: column;
+      align-items: left;
+      padding: 40px 30px;
+
+      .profile-info-row {
+        margin-bottom: 20px;
+        .profile-info-label {
+          font-size: 12px;
+          color: #696868;
+        }
+
+        .profile-info-detail {
+          font-size: 16px;
+          font-weight: 600;
+          color: #504f4f;
+        }
+      }
+    }
+  }
+
+  .color-white {
+    color: white;
+  }
+}
